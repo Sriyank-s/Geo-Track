@@ -8,19 +8,62 @@
 
 This project focuses on analyzing aerial imagery using YOLOv8 and geospatial data, along with gait-based deep learning models for human recognition and anomaly detection. The aerial dataset includes over 100,000 GeoTIFF images, while gait recognition utilizes CASIA-B and OU-ISIR datasets with over 500,000 samples. The system supports real-time surveillance and provides actionable insights through an interactive OSRM-based dashboard for visualization, geolocation mapping, and dynamic analytics.
 
-## Key Components
+## Key Steps in the Project
 
-### 1. Aerial Object Detection
-- **Dataset:** Over 100,000 labeled aerial images.
-- **Model:** YOLOv8 for object detection and classification.
-- **Geospatial Integration:** GeoTIFF data was used to enable precise geolocation mapping.
-- **Dashboard:** An interactive dashboard integrating OSRM supported real-time tracking, object visualization, and dynamic analytics for aerial surveillance applications.
+The datasets used for this project consisted of:
 
-### 2. Gait-Based Human Identification
-- **Dataset:** CASIA-B and OU-ISIR datasets, totaling over 500,000 video frames.
-- **Model:** Deep learning model trained on motion sequences segmented into spatiotemporal patches for enhanced feature extraction.
-- **Real-Time Implementation:** Integrated with OpenCV and TensorRT to accelerate inference.
-- **Performance:** Achieved robust accuracy in distinguishing normal from suspicious behavior during live monitoring.
+1. **Aerial Image Dataset:** Over 100,000 labeled GeoTIFF images for object detection and classification.  
+2. **Gait Recognition Dataset:** CASIA-B and OU-ISIR datasets with over 500,000 video frames for human identification and anomaly detection.
+
+### 1. Data Preparation
+
+**Preprocessing (Aerial Images):**  
+- Standardized all images to a uniform resolution and extracted geospatial information from GeoTIFF files.  
+- Removed corrupted or incomplete images to ensure dataset quality.  
+- Split data into training, validation, and testing sets to enable robust model evaluation.
+
+**Preprocessing (Gait Recognition):**  
+- Video frames were extracted and motion sequences segmented into spatiotemporal patches.  
+- Normalized and resized images to fit model input requirements.  
+- Data augmentation applied to improve generalization, including rotation, flipping, and scaling.
+
+**Transformation and Storage:**  
+- Aerial images and gait video frames were stored in structured directories for easy model integration.  
+- Metadata including geolocation, timestamps, and labels were stored in CSV files for indexing and analysis.
+
+---
+
+### 2. Exploratory Data Analysis (EDA)
+
+**Aerial Image Analysis:**  
+- Distribution of object classes analyzed to check for class imbalance.  
+- Spatial distribution of detected objects visualized to ensure geospatial coverage.
+
+**Gait Dataset Analysis:**  
+- Analyzed motion sequence lengths and frame quality to remove anomalies.  
+- Checked label distribution for normal versus suspicious behavior sequences.  
+
+**Visualization and Insights:**  
+- Heatmaps and scatter plots visualized object locations across geospatial coordinates.  
+- Histograms of gait sequence lengths helped determine optimal input sequence size for the model.  
+- Insights guided model input preprocessing and dataset balancing strategies.
+
+---
+
+### Key Visualizations
+
+- **Aerial Object Distribution:** Maps showing frequency and location of detected object classes.  
+- **Gait Sequence Analysis:** Box plots and histograms illustrating motion sequence lengths and variance.  
+- **Dashboard Snapshots:** Interactive visualizations showing real-time object tracking and geolocation mapping.
+
+**Findings and Insights:**  
+- Spatial integration of GeoTIFF data improved object localization accuracy.  
+- Preprocessing and segmentation of gait sequences enhanced model learning for human recognition.  
+- Class imbalance in aerial objects and gait behaviors was addressed via dataset augmentation to ensure fair model training.
+
+**Conclusion:**  
+The EDA and preprocessing provided critical insights into both aerial imagery and gait data, allowing for effective model development. By understanding dataset characteristics, preprocessing steps were tailored to optimize YOLOv8 object detection and deep learning gait recognition for accurate real-time surveillance.
+
 
 ## Challenges and Solutions
 - **Large-scale data handling:** Optimized data pipelines ensured smooth processing of 100k+ aerial images.
