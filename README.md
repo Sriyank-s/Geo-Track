@@ -94,4 +94,6 @@ The EDA and preprocessing provided critical insights into both aerial imagery an
 
 
 ## Conclusion
-GeoTrack AI demonstrates how computer vision, deep learning, and geospatial data integration can produce actionable intelligence for aerial surveillance and human identification tasks. While the underlying code is proprietary due to company policy, this README documents the methodology, results, and key learnings from the project.
+
+GeoTrack AI demonstrates how computer vision, deep learning, and geospatial data integration can produce actionable intelligence for aerial surveillance and human identification tasks. Due to restrictions from the company and since all rights belong to my organization, I am unable to provide the code or images from this project. This README, however, documents the methodology, results, and key learnings in detail, highlighting the project’s outcomes and insights while respecting company policies.
+
