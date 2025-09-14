@@ -76,9 +76,22 @@ The EDA and preprocessing provided critical insights into both aerial imagery an
 
 
 ## Key Insights
-- Combining geospatial data with deep learning significantly enhances object localization accuracy.
-- Real-time dashboards provide actionable insights for surveillance operations.
-- Gait-based recognition is effective for anomaly detection in live monitoring systems.
+
+1. **Integration of Geospatial Data and Deep Learning:**  
+   Incorporating geospatial coordinates from GeoTIFF files into the YOLOv8 object detection pipeline significantly improved object localization and mapping accuracy. By leveraging geospatial metadata, the model was able to not only detect objects but also accurately place them on real-world coordinates, enabling precise tracking and spatial analysis for aerial surveillance applications.
+
+2. **Real-Time Dashboards for Actionable Insights:**  
+   The interactive OSRM-based dashboard provided a visual interface to monitor detected objects and human activities in real time. Operators could track object movement, assess spatial patterns, and identify anomalies instantly. The dashboard allowed dynamic querying and visualization, transforming raw data from aerial imagery and video feeds into actionable insights for operational decision-making.
+
+3. **Gait-Based Recognition for Human Anomaly Detection:**  
+   The gait recognition model, trained on large datasets (CASIA-B and OU-ISIR), proved highly effective in identifying normal versus suspicious behavior. Spatiotemporal segmentation of video frames enhanced feature learning, allowing the model to detect subtle motion patterns that distinguish anomalous activities. This approach ensured robust performance in live surveillance, with accelerated inference provided by TensorRT integration.
+
+4. **Handling Large-Scale and Diverse Data:**  
+   Processing over 100,000 aerial images and 500,000+ gait video frames required optimized pipelines and careful preprocessing. Addressing challenges such as inconsistent image quality, varying lighting conditions, and motion artifacts was crucial. Preprocessing steps—including normalization, resizing, and augmentation—ensured the data fed into the models was of high quality and representative of real-world scenarios.
+
+5. **Insights on Model Deployment and Scalability:**  
+   Deploying the models in a real-time environment highlighted the importance of optimization for latency reduction. Combining TensorRT with efficient data loading allowed the system to process high-volume data streams without sacrificing accuracy, ensuring that the surveillance and tracking system could scale effectively to real-world applications.
+
 
 ## Conclusion
 GeoTrack AI demonstrates how computer vision, deep learning, and geospatial data integration can produce actionable intelligence for aerial surveillance and human identification tasks. While the underlying code is proprietary due to company policy, this README documents the methodology, results, and key learnings from the project.
