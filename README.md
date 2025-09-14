@@ -66,9 +66,14 @@ The EDA and preprocessing provided critical insights into both aerial imagery an
 
 
 ## Challenges and Solutions
-- **Large-scale data handling:** Optimized data pipelines ensured smooth processing of 100k+ aerial images.
-- **Real-time performance:** TensorRT integration reduced latency for live video analysis.
-- **Data diversity:** Spatiotemporal segmentation improved gait recognition for varied human motion patterns.
+
+- **Large-scale data handling:** Optimized data pipelines ensured smooth processing of 100,000+ aerial images.  
+- **Real-time performance:** TensorRT integration reduced latency for live video analysis.  
+- **Data diversity:** Spatiotemporal segmentation improved gait recognition for varied human motion patterns.  
+- **GeoTIFF Coordinate Extraction:** Extracting geospatial coordinates from GeoTIFF files required careful preprocessing to ensure accurate object localization.  
+- **Image and Video Quality:** Ensuring consistent quality across aerial images and video frames was critical for reliable model performance.  
+- **Class Imbalance:** Addressed using data augmentation and careful dataset splitting to ensure fair model training.
+
 
 ## Key Insights
 - Combining geospatial data with deep learning significantly enhances object localization accuracy.
