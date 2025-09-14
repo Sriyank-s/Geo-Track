@@ -4,11 +4,9 @@
 **Topic:** Computer Vision & Deep Learning
 
 ## Project Overview
-GeoTrack AI focuses on aerial image analysis and human identification using advanced deep learning and geospatial techniques. The project aimed to:
+**Objective:** Develop a computer vision and deep learning system for aerial image analysis, object detection, and human identification in surveillance applications.
 
-- Detect and classify objects in aerial images with high precision.
-- Incorporate geospatial insights for accurate mapping and object localization.
-- Build a real-time surveillance and tracking system using gait-based human identification.
+This project focuses on analyzing aerial imagery using YOLOv8 and geospatial data, along with gait-based deep learning models for human recognition and anomaly detection. The aerial dataset includes over 100,000 GeoTIFF images, while gait recognition utilizes CASIA-B and OU-ISIR datasets with over 500,000 samples. The system supports real-time surveillance and provides actionable insights through an interactive OSRM-based dashboard for visualization, geolocation mapping, and dynamic analytics.
 
 ## Key Components
 
